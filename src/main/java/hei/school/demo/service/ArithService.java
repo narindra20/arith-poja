@@ -1,31 +1,32 @@
-package school.hei.demo.service;
+package hei.school.demo.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class ArithService {
-  public int add(int a, int b) {
+
+  public long add(long a, long b) {
     if (a < 0 || b < 0) {
       throw new IllegalArgumentException("a and b must be positive");
     }
     return a + b;
   }
 
-  public int subtract(int a, int b) {
+  public long subtract(long a, long b) {
     if (a < 0 || b < 0) {
       throw new IllegalArgumentException("a and b must be positive");
     }
     return a - b;
   }
 
-  public int multiply(int a, int b) {
+  public long multiply(long a, long b) {
     if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
       throw new IllegalArgumentException("a and b must have same sign");
     }
     return a * b;
   }
 
-  public int divide(int a, int b) {
+  public long divide(long a, long b) {
     if (a < 0 || b < 0) {
       throw new IllegalArgumentException("a and b must be positive");
     }
